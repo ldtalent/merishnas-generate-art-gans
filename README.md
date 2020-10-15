@@ -6,8 +6,10 @@ Generating unique artworks using Generative Adversarial Networks.
 ```virtualenv venv```
 
 2. Activate the environment
-```cd venv/Scripts
-activate```
+```
+cd venv/Scripts
+activate
+```
 
 3. Go back to the root directory and install the requirements.txt
 ```pip install -r requirements.txt```
