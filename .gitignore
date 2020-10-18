@@ -7,7 +7,6 @@ __pycache__/
 .ipynb_checkpoints/
 
 # Extra data files
-generated_images/
 resized_data/
 models/
 
