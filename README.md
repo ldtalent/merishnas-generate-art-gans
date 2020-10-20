@@ -27,13 +27,13 @@ For the purpose of this tutorial, we are using Deep Convolutional GANs (DC GANs)
 
 A generator takes in a random noise vector (z) as input and outputs a fake image. We are using a de-convolutional neural network, whose architecture is the opposite of a conventional convolutional neural network. The idea behind doing this is that, at every layer of the network, as we halve the filter size, the size of the image is doubled, which finally results in a generated images.
 
-<img src="imgs/generatorarch.PNG">
+<img src="imgs/generatorarch.png">
 
 #### DC GAN Discriminator
 
 A discriminator takes in the real or generated image as an input and outputs a score based on its predictions. The network uses a CNN whose task is to classify the images from the training data set (real) and which come from the generator (fake).
 
-<img src="imgs/discriminatorarch.PNG">
+<img src="imgs/discriminatorarch.png">
 
 #### Results
 
