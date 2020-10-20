@@ -21,8 +21,6 @@ def get_image(image_path, width, height, mode):
     :return: Image data
     """
     image = Image.open(image_path)
-
-
     return np.array(image.convert(mode))
 
 
@@ -65,56 +63,6 @@ def images_square_grid(images, mode):
             new_im.paste(im, (col_i * images.shape[1], image_i * images.shape[2]))
 
     return new_im
-
-
-def download_extract(database_name, data_path):
-    """
-    Download and extract database
-    :param database_name: Database name
-    """
-    DATASET_CELEBA_NAME = 'celeba'
-    DATASET_MNIST_NAME = 'mnist'
-
-    if database_name == DATASET_CELEBA_NAME:
-        url = 'https://s3-us-west-1.amazonaws.com/udacity-dlnfd/datasets/celeba.zip'
-        hash_code = '00d2c5bc6d35e252742224ab0c1e8fcb'
-        extract_path = os.path.join(data_path, 'img_align_celeba')
-        save_path = os.path.join(data_path, 'celeba.zip')
-        extract_fn = _unzip
-    elif database_name == DATASET_MNIST_NAME:
-        url = 'http://yann.lecun.com/exdb/mnist/train-images-idx3-ubyte.gz'
-        hash_code = 'f68b3c2dcbeaaa9fbdd348bbdeb94873'
-        extract_path = os.path.join(data_path, 'mnist')
-        save_path = os.path.join(data_path, 'train-images-idx3-ubyte.gz')
-        extract_fn = _ungzip
-
-    if os.path.exists(extract_path):
-        print('Found {} Data'.format(database_name))
-        return
-
-    if not os.path.exists(data_path):
-        os.makedirs(data_path)
-
-    if not os.path.exists(save_path):
-        with DLProgress(unit='B', unit_scale=True, miniters=1, desc='Downloading {}'.format(database_name)) as pbar:
-            urlretrieve(
-                url,
-                save_path,
-                pbar.hook)
-
-    assert hashlib.md5(open(save_path, 'rb').read()).hexdigest() == hash_code, \
-        '{} file is corrupted.  Remove the file and try again.'.format(save_path)
-
-    os.makedirs(extract_path)
-    try:
-        extract_fn(save_path, extract_path, database_name, data_path)
-    except Exception as err:
-        shutil.rmtree(extract_path)  # Remove extraction folder if there is an error
-        raise err
-
-    # Remove compressed data
-    os.remove(save_path)
-
 
 class Dataset(object):
     """
