@@ -46,4 +46,4 @@ Note: You can download the model checkpoints I've trained from [here](https://dr
 ### Citations
 
 - The dataset for Architectural images was downloaded from [WikiArt Library](https://www.wikiart.org/en/paintings-by-genre) which contains a lot of artworks classified on the basis of genre.
-- [References from Thomas Simonini's CatDCGAN](https://github.com/simoninithomas/CatDCGAN)
+- [References from PokeGAN](https://github.com/llSourcell/Pokemon_GAN)
