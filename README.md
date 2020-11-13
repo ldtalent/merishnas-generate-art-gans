@@ -3,18 +3,39 @@
 Generating unique architectures using **Generative Adversarial Networks.**
 
 1. Start by creating a virtual environment for installing the libraries.
+
 ```virtualenv venv```
 
-2. Activate the environment
-```
-cd venv/Scripts
-activate
-```
+**Note:** If you have not installed the virtualenv library, you can do so by running:
 
-3. Go back to the root directory and install the requirements.txt
+```python3 -m pip install --user virtualenv```
+
+2. Activate the environment.
+
+	For Windows:
+
+	```
+	cd venv/Scripts
+	activate
+	```
+
+	For MacOS/Linux:
+
+	```source env/bin/activate```
+
+3. Go back to the root directory and install the requirements.txt.
+
 ```pip install -r requirements.txt```
 
-4. The `GAN_generation.ipynb` file contains the code for Image generation.
+4. We will be using Jupyter Notebook to run our code. You can install it using pip.
+
+```pip install notebook```
+
+5. The `GAN_generation.ipynb` file contains the code for Image generation.
+
+To run the ipynb notebook, you can run the following command at the Terminal (Mac/Linux) or Command Prompt (Windows) which will open the notebook:
+
+```jupyter notebook````
 
 ### Generative Adversarial Networks Architecture
 
