@@ -37,7 +37,7 @@ Generating unique architectures using **Generative Adversarial Networks.**
 
 To run the ipynb notebook, you can run the following command at the Terminal (Mac/Linux) or Command Prompt (Windows) which will open the notebook:
 
-```jupyter notebook````
+```jupyter notebook```
 
 ### Generative Adversarial Networks Architecture
 
