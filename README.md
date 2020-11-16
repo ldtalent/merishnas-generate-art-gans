@@ -4,7 +4,7 @@ Generating unique architectures using **Generative Adversarial Networks.**
 
 1. Start by creating a virtual environment for installing the libraries.
 
-```virtualenv venv```
+```python3 -m virtualenv venv```
 
 **Note:** If you have not installed the virtualenv library, you can do so by running:
 
@@ -26,6 +26,8 @@ Generating unique architectures using **Generative Adversarial Networks.**
 3. Go back to the root directory and install the requirements.txt.
 
 ```pip install -r requirements.txt```
+
+**Note:** Here, we are using TensorFlow v1 for which Python 3.8 is not supported. Please install Python 3.6 or earlier.
 
 4. We will be using Jupyter Notebook to run our code. You can install it using pip.
 
